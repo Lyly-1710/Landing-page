@@ -1,0 +1,244 @@
+html
+{
+    overflow-x: hidden;
+    color: white;   
+    
+}
+html div img
+{
+    width: 100%;
+    scale: 150% 150%;
+    translate: -1% 23%;
+    height: auto;
+}
+body, div
+{
+    margin: 0px;
+    font-family: "Open Sans",sans-serif;
+    color: white;
+}
+body ul
+{
+    list-style-type: none;
+    display: inline-flex;
+}
+.banner-sponsor, .banner-amazing img
+{
+    width: 100%;
+    height: auto;
+}
+.banner
+{
+    position: relative;
+    
+}
+.sponsor div img
+{
+    width: 100%;
+}
+.banner-sponsor, .banner-amazing
+{
+    position: relative;   
+}
+.banner1
+{
+    position: relative;
+}
+.banner1-img, .banner2-img
+{
+    position: relative;
+    z-index: 0;
+}
+.banner1-shape, .banner2-shape
+{
+    position: absolute;
+    z-index: 1;  
+}
+.banner2-shape
+{
+   translate: 0px -27%;
+}
+.sponsor
+{
+    display: inline-flex;
+    position: relative;
+    color: #bdb9f0;
+    background-color:#202342;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 6% 0;
+    translate: 0 -0.5%;
+}
+.banner2-img
+{
+    translate: 0px -0.5%;
+}
+.gear-icon
+{
+    display: flex;
+    background: white;
+    box-sizing: border-box;
+    width: 4vw;
+    height: 4vw;
+    
+}
+.banner-content
+{
+    position: absolute;
+    top: 0%;
+    
+}
+
+.dropdown
+{
+    display: block;
+    position: relative;
+}
+.dropdown div
+{
+    width: 200%;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    width: 200%;
+}
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+.header 
+{
+    display: inline-flex;
+    width: 100vw;
+    justify-content: space-between;
+    margin: 30px 60px;
+    box-sizing: content-box;
+}
+
+.list-header ul li
+{
+    display: flex;
+    margin-right: 10%;
+}
+.end-list
+{
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.header-button button
+{
+    width: fit-content;
+    height:auto;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 60px;
+    border: 0.5px solid #665cb2;
+    background: rgba(0,0,0,0);
+    color: white;
+    text-transform:uppercase;
+    margin-right: 120px;
+}
+.header-right
+{
+    display: flex;
+    align-items: center;
+}
+.header-right div
+{
+    margin: 0px 10px;
+}
+.first-body
+{
+    display: inline-flex;   
+    position: relative;
+    color:black;
+    width: 100%;
+    z-index: 1;
+    translate: 0 30%;
+    margin-left: 5%;
+    
+}
+.title
+{
+    display: flexbox;
+    bottom: 2%;
+}
+.title h1
+{
+    font-size: 5em;
+}
+.title-content
+{
+    font-size: 1.7em;
+}
+.title button
+{
+    display: flexbox;
+    text-transform: uppercase;
+    font-size: 1em;
+    width:fit-content;  
+    padding: 3% 7%;
+    border: solid 0px;
+    border-radius: 60px;
+    justify-content: flex-start;
+    
+}
+.title button:first-child
+{
+    background-image: linear-gradient(to right,#FF84FF,#5059F1);
+}
+.title button:last-child
+{
+    background: rgba(0,0,0,0.5);
+}
+.click img
+{
+    width: 60%;
+}
+.click
+{
+    display:flex;
+    rotate: 90deg;
+    width:fit-content;
+    align-items: center;
+}
+.click div
+{
+    margin: 10px;
+}
+.phone img
+{
+    position: relative;
+    width: 90%;
+    z-index: 3;
+}
+
+/* @media only screen and (max-width: 768px)
+{
+    
+    .header-button
+    {
+        display: none;
+    }
+    .list-header
+    {
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 990px)
+{
+    .list-header
+    {
+        display: none;
+    }
+}*/
+/* @media only screen and (min-width: 1200px)
+{
+    
+}   */
