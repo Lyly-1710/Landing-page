@@ -2,19 +2,17 @@ html
 {
     overflow-x: hidden;
     color: white;   
+    font-family: "Open Sans",sans-serif;
     
 }
 html div img
 {
     width: 100%;
-    scale: 150% 150%;
-    translate: -1% 23%;
     height: auto;
 }
 body, div
 {
     margin: 0px;
-    font-family: "Open Sans",sans-serif;
     color: white;
 }
 body ul
@@ -22,10 +20,14 @@ body ul
     list-style-type: none;
     display: inline-flex;
 }
+body button
+{
+    color: white;
+}
 .banner-sponsor, .banner-amazing img
 {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .banner
 {
@@ -48,11 +50,18 @@ body ul
 {
     position: relative;
     z-index: 0;
+    scale: 145% 145%;
+    translate: -1% 23%;
 }
 .banner1-shape, .banner2-shape
 {
     position: absolute;
     z-index: 1;  
+}
+.banner1-shape
+{
+    width: 100%;
+    top: 78.5%;
 }
 .banner2-shape
 {
@@ -68,11 +77,19 @@ body ul
     justify-content: center;
     width: 100vw;
     padding: 6% 0;
-    translate: 0 -0.5%;
+    top: 25vw;
+    z-index: 2;
 }
 .banner2-img
 {
-    translate: 0px -0.5%;
+  position: relative;
+  top: 5vw;
+}
+.banner2-shape{
+    position: relative;
+    width: 140vw;
+    bottom: 30vw;
+    right: 25vw;
 }
 .gear-icon
 {
@@ -80,14 +97,25 @@ body ul
     background: white;
     box-sizing: border-box;
     width: 4vw;
-    height: 4vw;
-    
+    height: 4vw;   
 }
 .banner-content
 {
     position: absolute;
     top: 0%;
-    
+}
+@keyframes dot1move
+{
+    100% {translate: -100vw;}
+}
+.dot1
+{
+    translate: 70vw 6vw;
+    position: absolute;
+    animation-name: dot1move;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+
 }
 
 .dropdown
@@ -112,10 +140,14 @@ body ul
 .header 
 {
     display: inline-flex;
+    position:fixed;
     width: 100vw;
     justify-content: space-between;
     margin: 30px 60px;
-    box-sizing: content-box;
+    font-size: 1.18rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    z-index: 999;
 }
 
 .list-header ul li
@@ -126,27 +158,28 @@ body ul
 .end-list
 {
     display: inline-flex;
-    align-items: center;
-    font-size: 1.3em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    
 }
 
 .header-button button
 {
     width: fit-content;
     height:auto;
-    font-weight: 600;
+    font-weight: 550;
+    font-size: 1em;
     padding: 20px 40px;
     border-radius: 60px;
     border: 0.5px solid #665cb2;
     background: rgba(0,0,0,0);
-    color: white;
     text-transform:uppercase;
     margin-right: 120px;
 }
 .header-right
 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 .header-right div
 {
@@ -155,37 +188,46 @@ body ul
 .first-body
 {
     display: inline-flex;   
-    position: relative;
     color:black;
-    width: 100%;
     z-index: 1;
-    translate: 0 30%;
-    margin-left: 5%;
     
 }
 .title
 {
     display: flexbox;
-    bottom: 2%;
+    box-sizing: border-box;
+    width: 90vw;
+    height: auto;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 25% 7%;
 }
 .title h1
 {
-    font-size: 5em;
+    font-size: 4.3em;
+    letter-spacing: 2px;
+    width: 50%;
+    height: 100%;
 }
 .title-content
 {
-    font-size: 1.7em;
+    font-size: 1.5em;
+    color:rgba(255,255,255,.9);
+    width: 40vw;
+    margin-bottom: 5%;
 }
-.title button
+
+.title-button button
 {
     display: flexbox;
     text-transform: uppercase;
     font-size: 1em;
+    font-weight: 600;
     width:fit-content;  
-    padding: 3% 7%;
+    padding: 2% 2%;
     border: solid 0px;
     border-radius: 60px;
     justify-content: flex-start;
+    margin-right: 3%;
     
 }
 .title button:first-child
@@ -194,28 +236,60 @@ body ul
 }
 .title button:last-child
 {
-    background: rgba(0,0,0,0.5);
-}
-.click img
-{
-    width: 60%;
+    border: 0.5px solid #665cb2;
+    background: rgba(0,0,0,0);
 }
 .click
 {
     display:flex;
+    position:absolute;
     rotate: 90deg;
-    width:fit-content;
+    right: 36%;
+    top: 35%;
     align-items: center;
 }
 .click div
 {
     margin: 10px;
+    font-size: 110%;
+    font-weight: 300;   
 }
-.phone img
+.phone
 {
-    position: relative;
-    width: 90%;
+    position: absolute;
+    width: 65%;
+    right: 1%;
+    left: 57%;   
+    top: 23%;
     z-index: 3;
+}
+.narrow
+{
+    position: absolute;
+    right: 30%;
+    top: 35%;
+}
+.sb-content
+{
+    color: red;
+    position:absolute;
+    width: 50vw;
+    bottom: 80vw;
+    z-index: 2;
+}
+.sb-content h3
+{
+    color: #ff8a00;
+}
+.sb-content h1
+{
+    color: white;
+    font-size: 3.5em;
+}
+.sb-content p
+{
+    color: #bdb9f0;
+    font-size: 1.2em;
 }
 
 /* @media only screen and (max-width: 768px)
