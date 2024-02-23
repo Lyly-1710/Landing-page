@@ -1,4 +1,28 @@
-html
+
+
+/* @media only screen and (max-width: 768px)
+{
+    
+    .header-button
+    {
+        display: none;
+    }
+    .list-header
+    {
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 990px)
+{
+    .list-header
+    {
+        display: none;
+    }
+}*/
+@media only screen and (min-width: 1200px)
+{
+    html
 {
     overflow-x: hidden;
     color: white;   
@@ -291,28 +315,4 @@ body button
     color: #bdb9f0;
     font-size: 1.2em;
 }
-
-/* @media only screen and (max-width: 768px)
-{
-    
-    .header-button
-    {
-        display: none;
-    }
-    .list-header
-    {
-        display: none;
-    }
-    
-}
-@media only screen and (max-width: 990px)
-{
-    .list-header
-    {
-        display: none;
-    }
-}*/
-/* @media only screen and (min-width: 1200px)
-{
-    
-}   */
+}  
