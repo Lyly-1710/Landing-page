@@ -27,7 +27,6 @@
     overflow-x: hidden;
     color: white;   
     font-family: "Open Sans",sans-serif;
-    
 }
 html div img
 {
@@ -56,6 +55,7 @@ body button
 .banner
 {
     position: relative;
+    z-index: -2;
     
 }
 .sponsor div img
@@ -69,12 +69,13 @@ body button
 .banner1
 {
     position: relative;
+
 }
 .banner1-img, .banner2-img
 {
     position: relative;
     z-index: 0;
-    scale: 145% 145%;
+    scale: 150% 150%;
     translate: -1% 23%;
 }
 .banner1-shape, .banner2-shape
@@ -107,7 +108,7 @@ body button
 .banner2-img
 {
   position: relative;
-  top: 5vw;
+  top: 22vw;
 }
 .banner2-shape{
     position: relative;
@@ -127,6 +128,7 @@ body button
 {
     position: absolute;
     top: 0%;
+    z-index: 2;
 }
 @keyframes dot1move
 {
@@ -293,26 +295,95 @@ body button
     right: 30%;
     top: 35%;
 }
-.sb-content
+.second-body
 {
-    color: red;
+    position:relative;
+    bottom: 20vw;
+}
+.sb-content, .sb-content2
+{
+
     position:absolute;
-    width: 50vw;
+    width: 43vw;
     bottom: 80vw;
     z-index: 2;
+    left: 6%;
 }
-.sb-content h3
+.sb-content2, .sb-content h3
 {
     color: #ff8a00;
 }
-.sb-content h1
+.sb-content, .sb-content2 h1
 {
     color: white;
     font-size: 3.5em;
+    z-index: 2;
 }
-.sb-content p
+.sb-content, .sb-content2 p
 {
     color: #bdb9f0;
     font-size: 1.2em;
 }
+.video
+{
+    position:absolute;
+    width: 65%;
+    left: 50%;
+    bottom: 35vw;
+    z-index: 2;
+}
+.sb-content2
+{
+    position:relative;
+    bottom: 40vw;
+}
+.feature
+{
+    width: 100vw;
+    display: inline-flex;
+    justify-content: center;
+}
+.feature div
+{
+    position:relative;
+    bottom: 40vw;
+    width: 10%;
+    height: auto;
+    background-color: rgb(49, 55, 125);
+    padding: 2% 2%;
+    margin: 1%;
+    border-radius: 20px;
+    
+}
+.how-content
+{
+    position:relative;
+    color: red;
+    bottom: 35vw;
+    text-align: center;
+}
+.how-item
+{
+    display: inline-flex;
+    width: 100vw;
+    position:relative;
+    bottom: 60vw;
+    background-color: #202342;
+    z-index: -1;
+    justify-content: space-evenly;
+    padding: 35% 3%;
+    
+}
+.how1, .how2, .how3 
+{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.how1, .how2, .how3, img
+{
+    width: 20%;
+}
 }  
+
