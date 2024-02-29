@@ -1,16 +1,84 @@
-<div class="banner1">
-        
-    <div class="banner-content">
-        <div class="gear-icon">
-            <div>
-                <img src="https://pixner.net/mosto/demo/ltr/dark/assets/images/gear.png" alt="" style="width: 80%">
-            </div>
-        </div>
-        
-            </div>
-        
-        
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draggable slider tab || Frontend Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+      <ul class="tabs-box">
+        <li class="tab">Programming</li>
+        <li class="tab active">HTML</li>
+        <li class="tab">CSS</li>
+        <li class="tab">Python</li>
+        <li class="tab">Frontend Development</li>
+        <li class="tab">Javascript</li>
+        <li class="tab">C++</li>
+        <li class="tab">C Language</li>
+        <li class="tab">Java</li>
+        <li class="tab">Coding</li>
+        <li class="tab">PHP</li>
+        <li class="tab">Study</li>
+        <li class="tab">Computer Science</li>
+        <li class="tab">Google</li>
+        <li class="tab">AI</li>
+      </ul>
+      <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
     </div>
-
-
-
+  </body>
+</html>
+<script>
+    const tabsBox = document.querySelector('.tabs-box'),
+   allTabs = tabsBox.querySelectorAll('.tab'),
+   arrowIcons = document.querySelectorAll('.icon i')
+ 
+ let isDragging = false
+ 
+ const handleIcons = scrollVal => {
+   let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth
+   arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? 'none' : 'flex'
+   arrowIcons[1].parentElement.style.display =
+     maxScrollableWidth - scrollVal <= 1 ? 'none' : 'flex'
+ }
+ 
+ arrowIcons.forEach(icon => {
+   icon.addEventListener('click', () => {
+     // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
+     let scrollWidth = (tabsBox.scrollLeft += icon.id === 'left' ? -340 : 340)
+     handleIcons(scrollWidth)
+   })
+ })
+ 
+ allTabs.forEach(tab => {
+   tab.addEventListener('click', () => {
+     tabsBox.querySelector('.active').classList.remove('active')
+     tab.classList.add('active')
+   })
+ })
+ 
+ const dragging = e => {
+   if (!isDragging) return
+   tabsBox.classList.add('dragging')
+   tabsBox.scrollLeft -= e.movementX
+   handleIcons(tabsBox.scrollLeft)
+ }
+ 
+ const dragStop = () => {
+   isDragging = false
+   tabsBox.classList.remove('dragging')
+ }
+ 
+ tabsBox.addEventListener('mousedown', () => (isDragging = true))
+ tabsBox.addEventListener('mousemove', dragging)
+ document.addEventListener('mouseup', dragStop)
+   </script>
