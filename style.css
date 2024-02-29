@@ -185,12 +185,17 @@ h1, h2, h3, h4, h5, h6
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 60px;
+    padding: 20px 40px;
     font-size: 1.18rem;
     font-weight: 500;
     box-sizing: border-box;
     z-index: 9990 !important;
     top: 0%;
+    background-color: #202342;
+    .logo
+    {
+        margin-left: 3%;
+    }
 }
 .header.scroll
 {
@@ -433,7 +438,7 @@ h1, h2, h3, h4, h5, h6
 .how-content
 {
     position:relative;
-    top: 25vw;
+    top: 10vw;
     text-align: center;
     z-index: 10 !important;
     h3 
