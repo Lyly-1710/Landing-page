@@ -27,6 +27,7 @@ html, body
     user-select:auto;
     pointer-events:all ;
     z-index: -999 !important;
+    height: max-content;
 }
 @media only screen and (min-width: 1200px)
 {
@@ -185,7 +186,7 @@ h1, h2, h3, h4, h5, h6
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 0px;
     font-size: 1.18rem;
     font-weight: 500;
     box-sizing: border-box;
@@ -791,6 +792,7 @@ input[type=text]:focus {
     position: relative;
     z-index: -99;
     bottom: 142vw;
+    height: max-content;
     .sb-content
     {
         position: relative;
@@ -1211,6 +1213,9 @@ input[type=text]:focus {
 }
 }
 .footer
+{
+    height: max-content;
+}
 .footer-container
 {
     position: relative;
